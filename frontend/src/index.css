@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  background-color: #f4f1ea;
+  color: #2c2c2c;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@theme {
+  --font-newspaper: "Times New Roman", Times, serif;
+  --font-headline: "Playfair Display", serif;
+  --color-paper: #f4f1ea;
+  --color-ink: #2c2c2c;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
